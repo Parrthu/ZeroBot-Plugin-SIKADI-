@@ -13,6 +13,7 @@ var (
 		"* Version 1.4.0 - 2022-05-16 14:41:17 +0800 CST",
 		"* Copyright © 2020 - 2022 FloatTech. All Rights Reserved.",
 		"* Project: https://github.com/FloatTech/ZeroBot-Plugin",
+		"！fork SIKADI:https://github.com/Parrthu/ZeroBot-Plugin-SIKADI-",
 	}
 	// Banner ...
 	Banner = strings.Join(info[:], "\n")
@@ -37,7 +38,7 @@ func Kanban() string {
 		return err.Error()
 	}
 	defer reg.Close()
-	text, err := reg.Get("ZeroBot-Plugin/kanban")
+	text, err := reg.Get("ZeroBot-Plugin-SIKADI-/kanban")
 	if err != nil {
 		return err.Error()
 	}
