@@ -9,7 +9,10 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/FloatTech/ZeroBot-Plugin/kanban" // 在最前打印 banner
+	"github.com/Parrthu/ZeroBot-Plugin-SIKADI-/kanban" 
+	
+	"github.com/Parrthu/ZeroBot-Plugin-SIKADI-/kanban"
+	// 在最前打印 banner
 
 	// ---------以下插件均可通过前面加 // 注释，注释后停用并不加载插件--------- //
 	// ----------------------插件优先级按顺序从高到低---------------------- //
@@ -27,15 +30,15 @@ import (
 
 	// webctrl "github.com/FloatTech/zbputils/control/web"           // web 后端控制
 
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/chat" // 基础词库
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/chat" // 基础词库
 
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/sleep_manage" // 统计睡眠时间
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/sleep_manage" // 统计睡眠时间
 
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/atri" // ATRI词库
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/chat" // ATRI词库
 
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/manager" // 群管
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/manager" // 群管
 
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/thesaurus" // 词典匹配回复
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/thesaurus" // 词典匹配回复
 
 	_ "github.com/FloatTech/zbputils/job" // 定时指令触发器
 
@@ -57,67 +60,67 @@ import (
 	//                          vvvvvvvvvvvvvv                          //
 	//                               vvvv                               //
 
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/ai_false"       // 服务器监控
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/aiwife"         // 随机老婆
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/b14"            // base16384加解密
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/baidu"          // 百度一下
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/bilibili"       // 查询b站用户信息
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/bilibili_parse" // b站视频链接解析
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/book_review"    // 哀伤雪刃吧推书记录
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/cangtoushi"     // 藏头诗
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/choose"         // 选择困难症帮手
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/chouxianghua"   // 说抽象话
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/coser"          // 三次元小姐姐
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/cpstory"        // cp短打
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/danbooru"       // DeepDanbooru二次元图标签识别
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/diana"          // 嘉心糖发病
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/drift_bottle"   // 漂流瓶
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/emojimix"       // 合成emoji
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/epidemic"       // 城市疫情查询
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/font"           // 渲染任意文字到图片
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/fortune"        // 运势
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/funny"          // 笑话
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/genshin"        // 原神抽卡
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/gif"            // 制图
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/github"         // 搜索GitHub仓库
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/hs"             // 炉石
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/hyaku"          // 百人一首
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/image_finder"   // 关键字搜图
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/inject"         // 注入指令
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/jandan"         // 煎蛋网无聊图
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/juejuezi"       // 绝绝子生成器
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/lolicon"        // lolicon 随机图片
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/moyu"           // 摸鱼
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/moyu_calendar"  // 摸鱼人日历
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/music"          // 点歌
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/nativesetu"     // 本地涩图
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/nativewife"     // 本地老婆
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/nbnhhsh"        // 拼音首字母缩写释义工具
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/novel"          // 铅笔小说网搜索
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/nsfw"           // nsfw图片识别
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/omikuji"        // 浅草寺求签
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/qqwife"         // 一群一天一夫一妻制群老婆
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/reborn"         // 投胎
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/runcode"        // 在线运行代码
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/saucenao"       // 以图搜图
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/scale"          // 叔叔的AI二次元图片放大
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/score"          // 分数
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/setutime"       // 来份涩图
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/shadiao"        // 沙雕app
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/shindan"        // 测定
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/tarot"          // 抽塔罗牌
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/tiangou"        // 舔狗日记
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/tracemoe"       // 搜番
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/translation"    // 翻译
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/vtb_quotation"  // vtb语录
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/wangyiyun"      // 网易云音乐热评
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/word_count"     // 聊天热词
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/wordle"         // 猜单词
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/ymgal"          // 月幕galgame
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/zaobao"         // 早报
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/ai_false"       // 服务器监控
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/aiwife"         // 随机老婆
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/b14"            // base16384加解密
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/baidu"          // 百度一下
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/bilibili"       // 查询b站用户信息
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/bilibili_parse" // b站视频链接解析
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/book_review"    // 哀伤雪刃吧推书记录
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/cangtoushi"     // 藏头诗
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/choose"         // 选择困难症帮手
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/chouxianghua"   // 说抽象话
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/coser"          // 三次元小姐姐
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/cpstory"        // cp短打
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/danbooru"       // DeepDanbooru二次元图标签识别
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/diana"          // 嘉心糖发病
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/drift_bottle"   // 漂流瓶
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/emojimix"       // 合成emoji
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/epidemic"       // 城市疫情查询
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/font"           // 渲染任意文字到图片
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/fortune"        // 运势
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/funny"          // 笑话
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/genshin"        // 原神抽卡
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/gif"            // 制图
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/github"         // 搜索GitHub仓库
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/hs"             // 炉石
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/hyaku"          // 百人一首
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/image_finder"   // 关键字搜图
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/inject"         // 注入指令
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/jandan"         // 煎蛋网无聊图
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/juejuezi"       // 绝绝子生成器
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/lolicon"        // lolicon 随机图片
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/moyu"           // 摸鱼
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/moyu_calendar"  // 摸鱼人日历
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/music"          // 点歌
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/nativesetu"     // 本地涩图
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/nativewife"     // 本地老婆
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/nbnhhsh"        // 拼音首字母缩写释义工具
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/novel"          // 铅笔小说网搜索
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/nsfw"           // nsfw图片识别
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/omikuji"        // 浅草寺求签
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/qqwife"         // 一群一天一夫一妻制群老婆
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/reborn"         // 投胎
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/runcode"        // 在线运行代码
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/saucenao"       // 以图搜图
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/scale"          // 叔叔的AI二次元图片放大
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/score"          // 分数
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/setutime"       // 来份涩图
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/shadiao"        // 沙雕app
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/shindan"        // 测定
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/tarot"          // 抽塔罗牌
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/tiangou"        // 舔狗日记
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/tracemoe"       // 搜番
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/translation"    // 翻译
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/vtb_quotation"  // vtb语录
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/wangyiyun"      // 网易云音乐热评
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/word_count"     // 聊天热词
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/wordle"         // 猜单词
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/ymgal"          // 月幕galgame
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/zaobao"         // 早报
 
-	// _ "github.com/FloatTech/ZeroBot-Plugin/plugin/wtf"            // 鬼东西
-	// _ "github.com/FloatTech/ZeroBot-Plugin/plugin/bilibili_push"  // b站推送
+	// _ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/wtf"            // 鬼东西
+	// _ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/bilibili_push"  // b站推送
 
 	//                               ^^^^                               //
 	//                          ^^^^^^^^^^^^^^                          //
@@ -137,9 +140,9 @@ import (
 	//                          vvvvvvvvvvvvvv                          //
 	//                               vvvv                               //
 
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/curse" // 骂人
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/curse" // 骂人
 
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/ai_reply" // 人工智能回复
+	_ "github.com/Parrthu/ZeroBot-Plugin-SIKADI-/plugin/ai_reply" // 人工智能回复
 
 	//                               ^^^^                               //
 	//                          ^^^^^^^^^^^^^^                          //
@@ -204,11 +207,11 @@ func init() {
 	}
 
 	// 通过代码写死的方式添加主人账号
-	// sus = append(sus, 12345678)
-	// sus = append(sus, 87654321)
+	//sus = append(sus, "zlwbdsr20030123")
+	 sus = append(sus, 3052959194)
 
 	// 启用 gui
-	// webctrl.InitGui(*g)
+	//webctrl.InitGui(*g)
 
 	if *runcfg != "" {
 		f, err := os.Open(*runcfg)
@@ -231,7 +234,7 @@ func init() {
 
 	config.W = []*driver.WSClient{driver.NewWebSocketClient(*url, *token)}
 	config.Z = zero.Config{
-		NickName:      append([]string{*adana}, "ATRI", "atri", "亚托莉", "アトリ"),
+		NickName:      append([]string{*adana}, "斯卡蒂", "蒂蒂", "红蒂", "你老婆"),
 		CommandPrefix: *prefix,
 		SuperUsers:    sus,
 		Driver:        []zero.Driver{config.W[0]},
