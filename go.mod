@@ -1,4 +1,4 @@
-module github.com/FloatTech/ZeroBot-Plugin
+module github.com/Parrthu/ZeroBot-Plugin-SIKADI-
 
 go 1.18
 
